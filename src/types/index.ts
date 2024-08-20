@@ -8,3 +8,9 @@ export interface storeLinks_t {
   img: string;
   ariaLabel: string;
 }
+
+export interface cards_t {
+  title: string;
+  img: string;
+  txt: string;
+}
