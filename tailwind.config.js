@@ -18,6 +18,10 @@ module.exports = {
     },
     extend: {
       colors: {
+        // custom
+        mainBlue: "#4153f2",
+        txtBlue: "#012970",
+        // shadcn-ui
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",

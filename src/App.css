@@ -2,6 +2,30 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  scroll-behavior: smooth;
+}
+
+html {
+  @apply text-[20px];
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  @apply text-[#444444];
+}
+
+.b {
+  @apply border-2 border-green-500;
+}
+
+.flexCenter {
+  @apply flex justify-center items-center;
+}
+
+.flexBetween {
+  @apply flex justify-between items-center;
+}
 @layer base {
   :root {
     --background: 0 0% 100%;

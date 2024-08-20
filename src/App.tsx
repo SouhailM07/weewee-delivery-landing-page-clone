@@ -1,7 +1,8 @@
 import "./App.css";
+import MainTemplate from "./components/templates/MainTemplate/MainTemplate";
 
 function App() {
-  return <></>;
+  return <MainTemplate />;
 }
 
 export default App;
