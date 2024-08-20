@@ -14,13 +14,13 @@ export default function Navbar() {
   ];
   return (
     <header className="py-[1rem]">
-      <nav className="text-txtBlue max-w-[58rem] mx-auto flexBetween">
+      <nav className="text-txtBlue max-w-[56rem] mx-auto flexBetween">
         <div className="flexCenter gap-x-2">
           <img src={logo} alt="logo" />
           <span className="text-[1.5rem] font-bold">WeeWee</span>
         </div>
-        <div className="flex gap-x-[2rem] items-center  text-[0.8rem] font-bold">
-          <ul role="list" className="flex gap-x-[2rem]">
+        <div className="flex gap-x-[1.7rem] items-center  text-[0.8rem] font-bold">
+          <ul role="list" className="flex gap-x-[1.7rem]">
             <ReactArr
               arr={links}
               Component={(e: navLinks) => (

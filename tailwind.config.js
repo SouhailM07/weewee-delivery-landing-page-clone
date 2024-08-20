@@ -20,6 +20,7 @@ module.exports = {
       colors: {
         // custom
         mainBlue: "#4153f2",
+        secondaryBg: "#f2f5fc",
         txtBlue: "#012970",
         // shadcn-ui
         border: "hsl(var(--border))",
