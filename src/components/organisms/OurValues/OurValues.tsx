@@ -34,7 +34,7 @@ export default function OurValues() {
         className="flex justify-center gap-x-[1.7rem] flex-wrap text-center"
       >
         <ReactArr
-          className="w-[18rem] p-[2rem]  hover:shadow-xl"
+          className="w-[18rem] border rounded-sm p-[2rem]  hover:shadow-xl"
           arr={cards}
           Component={(e: cards_t) => <RenderItem {...e} />}
         />

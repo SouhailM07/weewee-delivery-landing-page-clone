@@ -10,7 +10,7 @@ export default function Hero() {
           <h1 className="text-txtBlue text-[2.3rem] leading-[3.1rem] font-bold">
             Livraison rapide et fiable, à votre porte en un clin d'œil.
           </h1>
-          <p className="text-[1.2rem] ">
+          <p className="text-[1.2rem] leading-[1.5rem] my-3">
             Votre satisfaction est notre priorité, nous nous engageons à vous
             offrir le meilleur service de livraison.
           </p>

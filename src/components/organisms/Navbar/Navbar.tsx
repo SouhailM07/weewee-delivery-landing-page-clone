@@ -13,7 +13,7 @@ export default function Navbar() {
     { label: "Contact", link: "" },
   ];
   return (
-    <header className="py-[1rem]">
+    <header className="py-[1rem] sticky top-0 bg-white z-[100] shadow-md">
       <nav className="text-txtBlue max-w-[56rem] mx-auto flexBetween">
         <div className="flexCenter gap-x-2">
           <img src={logo} alt="logo" />

@@ -1,4 +1,5 @@
 import AboutUs from "../../organisms/AboutUs/AboutUs";
+import Counts from "../../organisms/Counts/Counts";
 import Hero from "../../organisms/Hero/Hero";
 import Navbar from "../../organisms/Navbar/Navbar";
 import OurValues from "../../organisms/OurValues/OurValues";
@@ -11,6 +12,7 @@ export default function MainTemplate() {
         <Hero />
         <AboutUs />
         <OurValues />
+        <Counts />
       </main>
     </>
   );

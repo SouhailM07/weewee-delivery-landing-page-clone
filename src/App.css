@@ -6,6 +6,10 @@
   scroll-behavior: smooth;
 }
 
+.cc {
+  @apply max-w-[58rem] mx-auto px-[1rem];
+}
+
 html {
   @apply text-[20px];
 }
