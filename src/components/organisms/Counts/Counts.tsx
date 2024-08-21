@@ -1,14 +1,10 @@
+import { counts_t } from "../../../types";
 import ReactArr from "../../atoms/ReactArr/ReactArr";
 import img1 from "/logo1.png";
 import img2 from "/logo2.png";
 import img3 from "/logo3.png";
 import img4 from "/logo4.png";
 
-interface counts_t {
-  img: string;
-  count: number;
-  label: string;
-}
 export default function Counts() {
   const counts: counts_t[] = [
     { img: img1, count: 354, label: "Clients heureux" },

@@ -14,3 +14,9 @@ export interface cards_t {
   img: string;
   txt: string;
 }
+
+export interface counts_t {
+  img: string;
+  count: number;
+  label: string;
+}
