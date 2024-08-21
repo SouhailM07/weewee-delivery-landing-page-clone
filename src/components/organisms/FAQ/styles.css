@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+[data-state="open"] .trigger {
+  @apply text-mainBlue;
+}
+
+/* [data-state="closed"] { */
+/* @apply text-mainBlue */
+/* } */

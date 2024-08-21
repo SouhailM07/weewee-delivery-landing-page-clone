@@ -1,5 +1,6 @@
 import AboutUs from "../../organisms/AboutUs/AboutUs";
 import Counts from "../../organisms/Counts/Counts";
+import FAQ from "../../organisms/FAQ/FAQ";
 import Features from "../../organisms/Features/Features";
 import Hero from "../../organisms/Hero/Hero";
 import Navbar from "../../organisms/Navbar/Navbar";
@@ -15,6 +16,7 @@ export default function MainTemplate() {
         <OurValues />
         <Counts />
         <Features />
+        <FAQ />
       </main>
     </>
   );

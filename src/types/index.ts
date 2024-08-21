@@ -20,3 +20,9 @@ export interface counts_t {
   count: number;
   label: string;
 }
+
+export interface faq_t {
+  question: string;
+  answer: string;
+  value?: string;
+}
