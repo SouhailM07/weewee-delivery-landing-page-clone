@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.blog_card:hover img,
+.blog_card:hover p,
+.blog_card:hover button {
+  transition: 0.3s;
+}
+
+.blog_card:hover img {
+  @apply scale-[1.35] rotate-12;
+}
+
+.blog_card:hover p {
+  @apply text-mainBlue;
+}
+
+.blog_card:hover button {
+  @apply text-violet-500;
+}

@@ -26,3 +26,11 @@ export interface faq_t {
   answer: string;
   value?: string;
 }
+
+export interface testimonials_t {
+  img: string;
+  name: string;
+  service: string;
+  comment: string;
+  rating: number;
+}
