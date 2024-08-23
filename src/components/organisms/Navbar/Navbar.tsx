@@ -34,7 +34,9 @@ export default function Navbar() {
               <FontAwesomeIcon icon={faChevronDown} className="text-[0.7rem]" />
             </li>
           </ul>
-          <MyButton customStyles="py-[0.4rem] px-4">Espace Membre</MyButton>
+          <MyButton hoverEffect className="py-[0.4rem] px-4">
+            Espace Membre
+          </MyButton>
         </div>
       </nav>
     </header>

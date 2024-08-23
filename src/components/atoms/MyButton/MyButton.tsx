@@ -1,13 +1,13 @@
 import { ButtonHTMLAttributes, ReactNode } from "react";
+import { cn } from "../../../lib/utils";
 
 interface MyButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-  customStyles?: string;
   hoverEffect?: boolean;
   children: ReactNode;
 }
 
 export default function MyButton({
-  customStyles,
+  className,
   hoverEffect,
   children,
   ...props
@@ -15,7 +15,12 @@ export default function MyButton({
   return (
     <button
       {...props}
-      className={`${customStyles} rounded-sm bg-mainBlue text-white `}
+      className={cn(
+        `rounded-sm bg-mainBlue text-white ${
+          hoverEffect && "hover:bg-[#5969f3]"
+        }`,
+        className
+      )}
     >
       {children}
     </button>

@@ -1,3 +1,5 @@
+import { IconDefinition } from "@fortawesome/fontawesome-svg-core";
+
 export interface navLinks {
   link: string;
   label: string;
@@ -33,4 +35,22 @@ export interface testimonials_t {
   service: string;
   comment: string;
   rating: number;
+}
+
+export interface contact_box_t {
+  icon: IconDefinition;
+  title: string;
+  value: string;
+}
+
+export enum FormFieldType {
+  INPUT = "input",
+  TEXTAREA = "textarea",
+}
+
+export interface MyInputProps {
+  form?: any;
+  name: string;
+  placeholder: string;
+  fieldType: FormFieldType;
 }

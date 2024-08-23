@@ -14,7 +14,7 @@ export default function Hero() {
             Votre satisfaction est notre priorité, nous nous engageons à vous
             offrir le meilleur service de livraison.
           </p>
-          <MyButton customStyles="py-2 px-7 flex items-center gap-x-2">
+          <MyButton className="py-2 px-7 flex items-center gap-x-2">
             <span>Commencer</span>
             <FontAwesomeIcon icon={faArrowRight} />
           </MyButton>

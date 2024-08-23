@@ -1,3 +1,4 @@
+import Contact from "../../organisms/Contact/Contact";
 import AboutUs from "../../organisms/AboutUs/AboutUs";
 import Blog from "../../organisms/Blog/Blog";
 import Counts from "../../organisms/Counts/Counts";
@@ -21,6 +22,7 @@ export default function MainTemplate() {
         <FAQ />
         <Testimonials />
         <Blog />
+        <Contact />
       </main>
     </>
   );
