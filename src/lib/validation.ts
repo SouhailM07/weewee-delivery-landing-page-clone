@@ -13,3 +13,9 @@ export const formSchema = z.object({
     .min(3, { message: "subject must be at least 3 characters" }),
   msg: z.string().min(3, { message: "msg must be at least 3 characters" }),
 });
+
+export const footerFormSchema = z.object({
+  phone: z
+    .string()
+    .refine((phone) => /^\+\d{10,15}$/.test(phone), "Invalid phone number"),
+});

@@ -8,6 +8,7 @@ import Hero from "../../organisms/Hero/Hero";
 import Navbar from "../../organisms/Navbar/Navbar";
 import OurValues from "../../organisms/OurValues/OurValues";
 import Testimonials from "../../organisms/Testimonials/Testimonials";
+import Footer from "../../organisms/Footer/Footer";
 
 export default function MainTemplate() {
   return (
@@ -24,6 +25,7 @@ export default function MainTemplate() {
         <Blog />
         <Contact />
       </main>
+      <Footer />
     </>
   );
 }
