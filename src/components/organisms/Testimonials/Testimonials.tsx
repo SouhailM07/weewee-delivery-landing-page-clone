@@ -2,22 +2,39 @@ import "./styles.css";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import HeadTitle from "../../atoms/HeadTitle/HeadTitle";
+import Autoplay from "embla-carousel-autoplay";
+
 import { testimonials_t } from "../../../types";
-import { Swiper, SwiperSlide } from "swiper/react";
-// Import Swiper styles
-import "swiper/css";
-import "swiper/css/pagination";
-import "swiper/css/navigation";
-// import required modules
-import { Pagination, Navigation } from "swiper/modules";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  type CarouselApi,
+} from "../../ui/carousel";
 
 import img1 from "/testimonials-1.jpg";
 import img2 from "/testimonials-2.jpg";
 import img3 from "/testimonials-3.jpg";
 import img4 from "/testimonials-4.jpg";
 import img5 from "/testimonials-5.jpg";
+import { useEffect, useState } from "react";
 
 export default function Testimonials() {
+  const [api, setApi] = useState<CarouselApi>();
+  const [current, setCurrent] = useState(0);
+  const [count, setCount] = useState(0);
+  useEffect(() => {
+    if (!api) {
+      return;
+    }
+
+    setCount(api.scrollSnapList().length);
+    setCurrent(api.selectedScrollSnap() + 1);
+
+    api.on("select", () => {
+      setCurrent(api.selectedScrollSnap() + 1);
+    });
+  }, [api]);
   const testimonials: testimonials_t[] = [
     {
       img: img2,
@@ -61,24 +78,47 @@ export default function Testimonials() {
     },
   ];
   return (
-    <section>
+    <section className="space-y-[3rem]">
       <HeadTitle title="Nos Clients et Partenaires" subTitle="Témoignages" />
-      <ul>
-        <Swiper
-          slidesPerView={3}
-          loop={true}
-          pagination={{
-            clickable: true,
-          }}
-          modules={[Pagination]}
-          className="mySwiper "
-        >
+      <Carousel
+        setApi={setApi}
+        role="list"
+        className="cc"
+        opts={{
+          align: "center",
+          loop: true,
+        }}
+        plugins={[
+          Autoplay({
+            delay: 4000,
+            stopOnInteraction: false,
+          }),
+        ]}
+      >
+        <CarouselContent>
           {testimonials.map((e, i) => (
-            <SwiperSlide key={i} role="listitem" className="static h-[20rem] ">
-              <RenderItem {...e} />
-            </SwiperSlide>
+            <CarouselItem
+              key={i}
+              role="listitem"
+              className="basis-1/3 select-none"
+            >
+              <RenderItem {...e} current={current} index={i} />
+            </CarouselItem>
           ))}
-        </Swiper>
+        </CarouselContent>
+      </Carousel>
+      <ul className=" flexCenter gap-x-2">
+        {Array(count)
+          .fill("")
+          .map((_e, i) => (
+            <li
+              onClick={() => api?.scrollTo(i)}
+              key={i}
+              className={`h-3 cursor-pointer rounded-full border-2 border-mainBlue aspect-square ${
+                current == i + 1 && "bg-mainBlue"
+              }`}
+            />
+          ))}
       </ul>
     </section>
   );
@@ -90,8 +130,13 @@ const RenderItem = ({
   name,
   rating,
   service,
-}: testimonials_t) => (
-  <div className="b  mx-auto w-[17rem] text-center  flex flex-col shadow-xl items-center  px-[1rem] py-[2rem]">
+  current,
+  index,
+}: testimonials_t & { current: number; index: number }) => (
+  <div
+    className={`min-h-[27rem] mx-auto w-[17rem] text-center  flex flex-col shadow-xl items-center  px-[1rem] py-[2rem] 
+    ${current == index + 1 ? "opacity-100 " : "opacity-40"}`}
+  >
     <RatingStars rating={rating} />
     <p className="italic my-[1rem] text-[0.95rem]">{comment}</p>
     <img
