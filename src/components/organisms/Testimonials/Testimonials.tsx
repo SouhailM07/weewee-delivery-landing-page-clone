@@ -144,8 +144,8 @@ const RenderItem = ({
       className="h-[4.5rem] aspect-square rounded-full my-4"
     />
 
-    <span className="font-bold text-[0.9rem]">{name}</span>
-    <span className="text-[0.7rem]">{service}</span>
+    <span className="font-bold text-[0.9rem] text-[#111111]">{name}</span>
+    <span className="text-[0.7rem] text-[#595959]">{service}</span>
   </div>
 );
 
