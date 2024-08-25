@@ -16,18 +16,21 @@ export default function Features() {
   ];
 
   return (
-    <section className="cc space-y-[3rem]">
+    <section className="cc space-y-[3rem] max-lg:max-w-[35rem]">
       <HeadTitle
         title="Disponible sur Google Play et App Store !"
         subTitle="Caractéristiques de l'application"
       />
-      <article className="grid grid-cols-2 gap-x-[1rem]">
+      <article className="grid grid-cols-2 max-lg:grid-cols-1 gap-[1rem]">
         <img src={featuresBg} alt="img" />
-        <ul role="list" className="grid grid-cols-2 gap-[1rem]">
+        <ul
+          role="list"
+          className="grid grid-cols-2 max-md:grid-cols-1 gap-[1rem]"
+        >
           <ReactArr
             arr={features}
             className="features_card flex items-center gap-x-[0.5rem]  shadow-md p-[1.2rem] rounded-md"
-            Component={(e) => <RenderItem txt={e.e} />}
+            Component={({ e }) => <RenderItem txt={e} />}
           />
         </ul>
       </article>

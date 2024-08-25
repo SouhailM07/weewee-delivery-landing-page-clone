@@ -22,7 +22,7 @@ export default function MainTemplate() {
         <AboutUs />
         <OurValues />
         <Counts />
-        {/* <Features /> */}
+        <Features />
         {/* <Services /> */}
         {/* <FAQ /> */}
         {/* <Testimonials /> */}
