@@ -35,7 +35,7 @@ export default function ScrollToTopButton() {
           exit={{ opacity: 0 }}
           aria-label="scroll to top button"
           onClick={scrollToTop}
-          className="fixed bottom-[2rem] flexCenter text-[0.8rem] bg-mainBlue text-white h-[2.2rem] aspect-square rounded-md right-[2rem]"
+          className="z-[100] fixed bottom-[2rem] flexCenter text-[0.8rem] bg-mainBlue text-white h-[2.2rem] aspect-square rounded-md right-[2rem]"
         >
           <FontAwesomeIcon icon={faArrowUp} />
         </motion.button>

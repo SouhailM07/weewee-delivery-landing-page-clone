@@ -36,9 +36,9 @@ export default function Blog() {
   ];
 
   return (
-    <section className="cc space-y-[2rem]">
+    <section className="cc space-y-[2rem] max-lg:max-w-[35rem] max-sm:w-full max-md:max-w-[25rem]">
       <HeadTitle title="Articles récents de notre Blog" subTitle="Blog" />
-      <ul className="flex justify-center gap-x-[1.5rem] flex-wrap">
+      <ul className="flex justify-center gap-y-[1rem] gap-x-[1.5rem] flex-wrap">
         <ReactArr arr={blogs} Component={RenderItem} />
       </ul>
     </section>
@@ -48,7 +48,7 @@ export default function Blog() {
 const RenderItem = ({ date, img, txt, link }: blogs_t) => (
   <a
     href={link}
-    className="w-[17rem] flex flex-col  pb-[1rem] h-full shadow-xl blog_card font-bold  cursor-pointer overflow-hidden"
+    className="w-[17rem] max-w1200:w-[15rem] max-lg:w-full  flex flex-col  pb-[1rem] h-full shadow-xl blog_card font-bold  cursor-pointer overflow-hidden"
   >
     <img src={img} alt="img" />
     <div className="relative z-[2] px-[1.5rem] h-full bg-white flex flex-col justify-between items-start ">
