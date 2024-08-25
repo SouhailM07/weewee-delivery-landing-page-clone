@@ -9,6 +9,7 @@ import Navbar from "../../organisms/Navbar/Navbar";
 import OurValues from "../../organisms/OurValues/OurValues";
 import Testimonials from "../../organisms/Testimonials/Testimonials";
 import Footer from "../../organisms/Footer/Footer";
+import Services from "../../organisms/Services/Services";
 
 export default function MainTemplate() {
   return (
@@ -20,6 +21,7 @@ export default function MainTemplate() {
         <OurValues />
         <Counts />
         <Features />
+        <Services />
         <FAQ />
         <Testimonials />
         <Blog />

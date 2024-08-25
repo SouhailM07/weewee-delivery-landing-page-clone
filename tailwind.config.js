@@ -36,7 +36,8 @@ module.exports = {
         mainBlue: "#4153f2",
         secondaryBg: "#f2f5fc",
         txtBlue: "#012970",
-        whitePink: "#FAFBFF",
+        // whitePink: "#FAFBFF",
+        whitePink: "#f5f8ff",
         // shadcn-ui
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
