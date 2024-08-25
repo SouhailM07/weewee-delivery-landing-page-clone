@@ -31,10 +31,10 @@ export default function OurValues() {
       />
       <ul
         role="list"
-        className="flex justify-center gap-x-[1.7rem] flex-wrap text-center"
+        className="max-lg:flex-col gap-y-[1rem] flex justify-evenly max-lg:items-center gap-x-3 cc flex-wrap text-center"
       >
         <ReactArr
-          className="w-[18rem] border rounded-sm p-[2rem]  hover:shadow-xl"
+          className="group max-w1200:w-[15.5rem]  max-md:w-full max-lg:w-[80vw] w-[18rem] border rounded-sm sm:p-[2rem]  hover:shadow-xl"
           arr={cards}
           Component={(e: cards_t) => <RenderItem {...e} />}
         />
@@ -45,8 +45,14 @@ export default function OurValues() {
 
 const RenderItem = ({ img, title, txt }: cards_t) => (
   <>
-    <img className="h-[9rem] mx-auto aspect-auto " src={img} alt="img" />
-    <h1 className="text-txtBlue font-bold mt-1 mb-3 text-[1.2rem]">{title}</h1>
-    <p className="">{txt}</p>
+    <img
+      className="h-[9rem] transition-all duration-300 group-hover:scale-90  max-lg:h-[20rem]  max-md:h-[14rem] mx-auto aspect-auto "
+      src={img}
+      alt="img"
+    />
+    <h1 className="max-sm:px-[1rem]  text-txtBlue font-bold mt-1 mb-3 text-[1.2rem]">
+      {title}
+    </h1>
+    <p className="max-sm:p-[1rem] ">{txt}</p>
   </>
 );

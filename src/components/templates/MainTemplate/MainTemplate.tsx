@@ -20,7 +20,7 @@ export default function MainTemplate() {
       <main className="space-y-[5rem]">
         <Hero />
         <AboutUs />
-        {/* <OurValues /> */}
+        <OurValues />
         {/* <Counts /> */}
         {/* <Features /> */}
         {/* <Services /> */}
