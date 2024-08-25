@@ -19,7 +19,7 @@ export default function MainTemplate() {
       <ScrollToTopButton />
       <main className="space-y-[5rem]">
         <Hero />
-        {/* <AboutUs /> */}
+        <AboutUs />
         {/* <OurValues /> */}
         {/* <Counts /> */}
         {/* <Features /> */}

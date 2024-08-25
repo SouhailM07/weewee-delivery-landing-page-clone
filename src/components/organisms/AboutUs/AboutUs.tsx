@@ -18,8 +18,8 @@ export default function AboutUs() {
     },
   ];
   return (
-    <section className="max-w-[56rem] mx-auto bg-secondaryBg px-8 py-6  rounded-sm grid grid-cols-2 gap-x-[2rem]">
-      <article>
+    <section className="max-w-[56rem] mx-auto max-sm:m-3 bg-secondaryBg sm:px-8 py-6  rounded-sm grid grid-cols-2 gap-x-[2rem] max-lg:grid-cols-1 max-lg:max-w-[35rem] max-md:max-w-[25rem]">
+      <article className="max-sm:px-8">
         <h1 className="text-mainBlue text-[0.8rem] font-bold">
           Qui Sommes nous ?
         </h1>
@@ -34,14 +34,17 @@ export default function AboutUs() {
           processus de livraison traditionnelle, long et complexe et le réduit
           en quelques clics.
         </p>
-        <ul className="flex gap-x-[1rem] mt-[1rem]">
+        <ul
+          role="list"
+          className="flex gap-x-[1rem] mt-[1rem] max-md:flex-col max-md:items-center"
+        >
           <ReactArr
             arr={storeLinks}
             Component={(e: storeLinks_t) => (
               <a href={e.link}>
                 <img
                   src={e.img}
-                  className="h-[2rem] "
+                  className="h-[2rem] aspect-auto max-md:h-[4rem] "
                   alt="img"
                   aria-label={e.ariaLabel}
                 />
@@ -51,7 +54,7 @@ export default function AboutUs() {
         </ul>
       </article>
       <article>
-        <img src={aboutImg} alt="img" />
+        <img src={aboutImg} alt="img" className="max-lg:mx-auto" />
       </article>
     </section>
   );

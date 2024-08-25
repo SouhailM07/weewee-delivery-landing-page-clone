@@ -8,7 +8,7 @@ export default function Hero() {
     <section className="bg-[url('/blueBg.png')] bg-no-repeat bg-[length:100%_100%] py-[2rem] min-h-screen flexCenter">
       <div className="cc mx-auto grid grid-cols-2 gap-x-[3rem] max-lg:grid-cols-1">
         <article className="flex flex-col justify-between items-start max-md:items-center max-md:text-center max-lg:justify-center max-w-[33rem] max-md:max-w-[25rem] max-lg:py-[4rem] max-sm:pb-[1rem]">
-          <h1 className="text-txtBlue text-[2.3rem] leading-[3.1rem]  font-bold max-md:text-[1.6rem] max-md:leading-[2.5rem]">
+          <h1 className="text-txtBlue text-[2.3rem] leading-[3.1rem]  font-bold max-md:text-[1.6rem] max-md:leading-[2.2rem]">
             Livraison rapide et fiable, à votre porte en un clin d'œil.
           </h1>
           <p className="text-[1.2rem] leading-[1.5rem] my-3">
