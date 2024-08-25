@@ -78,7 +78,7 @@ export default function Testimonials() {
     },
   ];
   return (
-    <section className="space-y-[3rem]">
+    <section className="space-y-[2rem]">
       <HeadTitle title="Nos Clients et Partenaires" subTitle="Témoignages" />
       <Carousel
         setApi={setApi}
@@ -100,7 +100,7 @@ export default function Testimonials() {
             <CarouselItem
               key={i}
               role="listitem"
-              className="basis-1/3 select-none"
+              className="w1200:basis-1/3   select-none"
             >
               <RenderItem {...e} current={current} index={i} />
             </CarouselItem>
@@ -134,7 +134,7 @@ const RenderItem = ({
   index,
 }: testimonials_t & { current: number; index: number }) => (
   <div
-    className={`min-h-[27rem] mx-auto w-[17rem] text-center  flex flex-col shadow-xl items-center  px-[1rem] py-[2rem] 
+    className={`min-h-[27rem] mx-auto w1200:w-[17rem] text-center  flex flex-col shadow-xl items-center  px-[1rem] py-[2rem] 
     ${current == index + 1 ? "opacity-100 " : "opacity-40"}`}
   >
     <RatingStars rating={rating} />
