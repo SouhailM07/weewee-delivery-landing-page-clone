@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import MyButton from "../../atoms/MyButton/MyButton";
-import heroBg from "/hero.jpg";
+import heroBg from "/hero.webp";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 // import blueBg from "../../../../public/blueBg.png"
 export default function Hero() {
@@ -22,6 +22,8 @@ export default function Hero() {
         </article>
         <article className="h-full max-lg:h-[17rem] mx-auto ">
           <img
+            loading="eager"
+            fetchPriority="high"
             src={heroBg}
             alt="img"
             className="h-full object-contain object-center rounded-lg aspect-auto"
