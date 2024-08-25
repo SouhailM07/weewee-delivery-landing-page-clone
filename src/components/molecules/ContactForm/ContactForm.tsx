@@ -38,7 +38,7 @@ export default function ContactForm() {
             placeholder="Votre nom"
             name="username"
           />
-          <div className="grid grid-cols-2 gap-x-[2rem]">
+          <div className="grid grid-cols-2 gap-y-[1rem] gap-x-[2rem] max-md:grid-cols-1">
             <MyFormItem
               form={form}
               fieldType={FormFieldType.INPUT}

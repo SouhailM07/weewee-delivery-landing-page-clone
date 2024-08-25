@@ -27,7 +27,7 @@ export default function MainTemplate() {
         <FAQ />
         <Testimonials />
         <Blog />
-        {/* <Contact /> */}
+        <Contact />
       </main>
       {/* <Footer />  */}
     </>

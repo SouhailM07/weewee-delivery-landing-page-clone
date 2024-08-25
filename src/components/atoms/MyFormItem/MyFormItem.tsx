@@ -44,7 +44,7 @@ export default function MyFormItem(props: MyInputProps) {
           }`}
         >
           <RenderInput props={props} field={field} />
-          <FormMessage className="absolute translate-y-[-9px]" />
+          <FormMessage className="absolute translate-y-[-9px] max-sm:text-[0.7rem]" />
         </FormItem>
       )}
     />

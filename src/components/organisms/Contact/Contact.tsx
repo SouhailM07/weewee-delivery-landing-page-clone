@@ -36,15 +36,18 @@ export default function Contact() {
     },
   ];
   return (
-    <section className="cc space-y-[2rem]">
+    <section className="cc space-y-[2rem] max-lg:max-w-[40rem] max-md:max-w-[30rem]">
       <HeadTitle title="Nous sommes là pour vous aider" subTitle="Contact" />
-      <div className="grid grid-cols-2 gap-x-[2rem]">
+      <div className="grid grid-cols-2 max-lg:grid-cols-1 gap-x-[2rem]">
         <article className="pb-[2rem] ">
-          <ul role="list" className="grid grid-cols-2  gap-[1rem]  ">
+          <ul
+            role="list"
+            className="grid grid-cols-2 max-md:grid-cols-1 gap-[1rem]  "
+          >
             <ReactArr
               arr={contactsInfo}
               Component={ContactBox}
-              className="bg-whitePink w-[12rem] py-[1.5rem] px-[1.8rem] items-start flex flex-col "
+              className="bg-whitePink max-lg:w-full  w-[12rem] py-[1.5rem] px-[1.8rem] items-start flex flex-col "
             />
           </ul>
         </article>
