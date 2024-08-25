@@ -21,7 +21,7 @@ export default function MainTemplate() {
         <Hero />
         <AboutUs />
         <OurValues />
-        {/* <Counts /> */}
+        <Counts />
         {/* <Features /> */}
         {/* <Services /> */}
         {/* <FAQ /> */}

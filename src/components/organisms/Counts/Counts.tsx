@@ -15,7 +15,7 @@ export default function Counts() {
 
   return (
     <section className="cc">
-      <ul className="flex justify-between flex-wrap">
+      <ul className=" grid grid-cols-4 max-md:grid-cols-1 max-lg:grid-cols-2 gap-x-2 gap-y-[1rem] justify-between">
         <ReactArr
           arr={counts}
           className="shadow-lg flex gap-x-[1rem] py-[1rem] px-[2rem] items-center"
