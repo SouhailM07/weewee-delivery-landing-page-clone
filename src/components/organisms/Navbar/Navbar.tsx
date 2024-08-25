@@ -4,6 +4,8 @@ import MyButton from "../../atoms/MyButton/MyButton";
 import ReactArr from "../../atoms/ReactArr/ReactArr";
 import logo from "/logo.png";
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
+import { useEffect, useState } from "react";
+
 export default function Navbar() {
   const links: navLinks[] = [
     { label: "Accueil", link: "" },
@@ -12,8 +14,26 @@ export default function Navbar() {
     { label: "Blog", link: "" },
     { label: "Contact", link: "" },
   ];
+  const [shrink, setShrink] = useState(false);
+
+  const toggleVisibility = () => {
+    if (window.scrollY > 180) {
+      setShrink(true);
+    } else {
+      setShrink(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", toggleVisibility);
+    return () => window.removeEventListener("scroll", toggleVisibility);
+  }, []);
   return (
-    <header className="py-[1rem] sticky top-0 bg-white z-[100] shadow-md">
+    <header
+      className={`${
+        shrink ? "py-[0.7rem]" : "py-[1rem]"
+      } sticky top-0 bg-white z-[100] shadow-md duration-300 transition-all`}
+    >
       <nav className="text-txtBlue max-w-[56rem] mx-auto flexBetween">
         <div className="flexCenter gap-x-2">
           <img src={logo} alt="logo" />

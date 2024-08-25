@@ -10,11 +10,13 @@ import OurValues from "../../organisms/OurValues/OurValues";
 import Testimonials from "../../organisms/Testimonials/Testimonials";
 import Footer from "../../organisms/Footer/Footer";
 import Services from "../../organisms/Services/Services";
+import ScrollToTopButton from "../../atoms/ScrollToTopBtn/ScrollToTopBtn";
 
 export default function MainTemplate() {
   return (
     <>
       <Navbar />
+      <ScrollToTopButton />
       <main className="space-y-[5rem]">
         <Hero />
         <AboutUs />
