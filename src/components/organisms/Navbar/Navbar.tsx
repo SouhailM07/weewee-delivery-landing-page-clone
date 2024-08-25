@@ -61,8 +61,8 @@ export default function Navbar() {
             <img className="max-md:hidden" src={logo} alt="logo" />
             <img
               className="md:hidden"
-              width={32}
-              height={39}
+              width={48}
+              height={60}
               src={logo}
               alt="logo"
             />
