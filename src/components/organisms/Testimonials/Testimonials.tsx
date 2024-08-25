@@ -3,6 +3,13 @@ import { faStar } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import HeadTitle from "../../atoms/HeadTitle/HeadTitle";
 import { testimonials_t } from "../../../types";
+import { Swiper, SwiperSlide } from "swiper/react";
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+// import required modules
+import { Pagination, Navigation } from "swiper/modules";
 
 import img1 from "/testimonials-1.jpg";
 import img2 from "/testimonials-2.jpg";
@@ -21,7 +28,7 @@ export default function Testimonials() {
       rating: 5,
     },
     {
-      img: img2,
+      img: img1,
       name: "K. Amina",
       service: "E-commerçant",
       comment:
@@ -36,14 +43,42 @@ export default function Testimonials() {
         "J'ai utilisé l'application WeeWee pour faire livrer des médicaments à mon père qui est malade et il a été très reconnaissant. Les médicaments sont arrivés à temps et dans un état parfait.",
       rating: 5,
     },
+    {
+      img: img4,
+      name: "K. Soumai",
+      service: "S. Publique",
+      comment:
+        "J'ai utilisé l'application WeeWee pour faire livrer des médicaments à mon père qui est malade et il a été très reconnaissant. Les médicaments sont arrivés à temps et dans un état parfait.",
+      rating: 5,
+    },
+    {
+      img: img5,
+      name: "K. Soumai",
+      service: "S. Publique",
+      comment:
+        "J'ai utilisé l'application WeeWee pour faire livrer des médicaments à mon père qui est malade et il a été très reconnaissant. Les médicaments sont arrivés à temps et dans un état parfait.",
+      rating: 5,
+    },
   ];
   return (
     <section>
       <HeadTitle title="Nos Clients et Partenaires" subTitle="Témoignages" />
       <ul>
-        {testimonials.slice(0, 1).map((e, i) => (
-          <RenderItem key={i} {...e} />
-        ))}
+        <Swiper
+          slidesPerView={3}
+          loop={true}
+          pagination={{
+            clickable: true,
+          }}
+          modules={[Pagination]}
+          className="mySwiper "
+        >
+          {testimonials.map((e, i) => (
+            <SwiperSlide key={i} role="listitem" className="static h-[20rem] ">
+              <RenderItem {...e} />
+            </SwiperSlide>
+          ))}
+        </Swiper>
       </ul>
     </section>
   );
@@ -56,10 +91,7 @@ const RenderItem = ({
   rating,
   service,
 }: testimonials_t) => (
-  <li
-    role="listitem"
-    className="text-center w-[17rem] flex flex-col shadow-xl items-center  px-[1rem] py-[2rem]"
-  >
+  <div className="b  mx-auto w-[17rem] text-center  flex flex-col shadow-xl items-center  px-[1rem] py-[2rem]">
     <RatingStars rating={rating} />
     <p className="italic my-[1rem] text-[0.95rem]">{comment}</p>
     <img
@@ -70,7 +102,7 @@ const RenderItem = ({
 
     <span className="font-bold text-[0.9rem]">{name}</span>
     <span className="text-[0.7rem]">{service}</span>
-  </li>
+  </div>
 );
 
 const RatingStars = ({ rating }: { rating: number }) => {
