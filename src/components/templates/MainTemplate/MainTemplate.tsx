@@ -19,17 +19,17 @@ export default function MainTemplate() {
       <ScrollToTopButton />
       <main className="space-y-[5rem]">
         <Hero />
-        <AboutUs />
-        <OurValues />
-        <Counts />
-        <Features />
-        <Services />
-        <FAQ />
-        <Testimonials />
-        <Blog />
-        <Contact />
+        {/* <AboutUs /> */}
+        {/* <OurValues /> */}
+        {/* <Counts /> */}
+        {/* <Features /> */}
+        {/* <Services /> */}
+        {/* <FAQ /> */}
+        {/* <Testimonials /> */}
+        {/* <Blog /> */}
+        {/* <Contact /> */}
       </main>
-      <Footer />
+      {/* <Footer />  */}
     </>
   );
 }

@@ -3,7 +3,7 @@ import { navLinks } from "../../../types";
 import MyButton from "../../atoms/MyButton/MyButton";
 import ReactArr from "../../atoms/ReactArr/ReactArr";
 import logo from "/logo.png";
-import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
+import { faBars, faChevronDown } from "@fortawesome/free-solid-svg-icons";
 import { useEffect, useState } from "react";
 
 export default function Navbar() {
@@ -32,14 +32,18 @@ export default function Navbar() {
     <header
       className={`${
         shrink ? "py-[0.7rem]" : "py-[1rem]"
-      } sticky top-0 bg-white z-[100] shadow-md duration-300 transition-all`}
+      } fixed w-full  top-0 bg-white z-[100] shadow-md duration-300 transition-all px-[1rem]`}
     >
       <nav className="text-txtBlue max-w-[56rem] mx-auto flexBetween">
         <div className="flexCenter gap-x-2">
           <img src={logo} alt="logo" />
           <span className="text-[1.5rem] font-bold">WeeWee</span>
         </div>
-        <div className="flex gap-x-[1.7rem] items-center  text-[0.8rem] font-bold">
+        <FontAwesomeIcon
+          icon={faBars}
+          className="w1200:hidden h-[1.4rem] aspect-square"
+        />
+        <div className="flex max-w1200:hidden gap-x-[1.7rem] items-center  text-[0.8rem] font-bold">
           <ul role="list" className="flex gap-x-[1.7rem]">
             <ReactArr
               arr={links}
