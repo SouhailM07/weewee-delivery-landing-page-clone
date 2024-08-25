@@ -24,7 +24,7 @@ export default function MainTemplate() {
         <Counts />
         <Features />
         {/* <Services /> */}
-        {/* <FAQ /> */}
+        <FAQ />
         {/* <Testimonials /> */}
         {/* <Blog /> */}
         {/* <Contact /> */}

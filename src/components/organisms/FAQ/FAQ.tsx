@@ -43,9 +43,9 @@ export default function FAQ() {
     },
   ];
   return (
-    <section className="cc space-y-[3rem]">
+    <section className="cc space-y-[3rem] max-lg:max-w-[35rem]">
       <HeadTitle title="F.A.Q" subTitle="Frequently Asked Questions" />
-      <article className="flex max-lg:flex-wrap gap-x-[1rem]  justify-center">
+      <article className="grid grid-cols-2 max-lg:grid-cols-1 gap-x-[1rem]  ">
         <ul role="list" className="w-full">
           {faq.map((e, i) => (
             <li key={i} role="listitem">
