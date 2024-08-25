@@ -23,7 +23,7 @@ export default function MainTemplate() {
         <OurValues />
         <Counts />
         <Features />
-        {/* <Services /> */}
+        <Services />
         <FAQ />
         <Testimonials />
         <Blog />

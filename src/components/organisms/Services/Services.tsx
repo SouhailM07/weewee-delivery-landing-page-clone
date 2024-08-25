@@ -60,7 +60,7 @@ export default function Services() {
         title="Notre service client est disponible 24h/24 et 7j/7 !"
         subTitle="Services"
       />
-      <ul className="grid grid-cols-3 gap-[1rem]">
+      <ul className="grid grid-cols-3 gap-[1rem] max-lg:grid-cols-2 max-lg:place-items-center max-md:grid-cols-1">
         {servicesCards.map((e, i) => (
           <RenderItem key={i} {...e} />
         ))}
@@ -78,7 +78,7 @@ const RenderItem = ({
 }: ServiceCardT) => (
   <li
     className={cn(
-      `group rounded-sm shadow-lg border-b-4  transition-all duration-300 hover:text-white w-[18rem] h-[27rem] text-center py-[3rem] px-[1.5rem] flex flex-col justify-between`,
+      `group rounded-sm shadow-lg border-b-4  transition-all duration-300 hover:text-white max-w1200:w-[16rem] max-md:min-h-[22rem] max-md:w-[70vw]  max-lg:w-[17rem] max-sm:w-full max-lg:h-[26rem] w-[18rem] h-[27rem] text-center py-[3rem] px-[1.5rem] flex flex-col justify-between`,
       parentStyles
     )}
   >
@@ -94,12 +94,12 @@ const RenderItem = ({
           className=" h-[1.5rem] aspect-square"
         />
       </span>
-      <h1 className="text-[1.8rem] leading-[2.2rem] mt-[1rem] mb-2 font-bold">
+      <h1 className="max-sm:text-[1.5rem] text-[1.8rem] leading-[2.2rem] mt-[1rem] mb-2 font-bold">
         {title}
       </h1>
       <p>{txt}</p>
     </div>
-    <a href={link} className="flexCenter text-[0.9rem]">
+    <a href={link} className="mt-2 flexCenter text-[0.9rem]">
       <span>En savoir plus... </span>
       <FontAwesomeIcon icon={faLongArrowRight} />
     </a>
