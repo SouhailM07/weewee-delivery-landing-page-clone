@@ -1,7 +1,7 @@
 import "./styles.css";
 import HeadTitle from "../../atoms/HeadTitle/HeadTitle";
-import img1 from "/blog1.jpg";
-import img2 from "/blog2.jpg";
+import img1 from "/blog1.webp";
+import img2 from "/blog2.webp";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLongArrowRight } from "@fortawesome/free-solid-svg-icons";
 import ReactArr from "../../atoms/ReactArr/ReactArr";

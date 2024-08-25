@@ -1,9 +1,9 @@
 import { counts_t } from "../../../types";
 import ReactArr from "../../atoms/ReactArr/ReactArr";
-import img1 from "/logo1.png";
-import img2 from "/logo2.png";
-import img3 from "/logo3.png";
-import img4 from "/logo4.png";
+import img1 from "/logo1.webp";
+import img2 from "/logo2.webp";
+import img3 from "/logo3.webp";
+import img4 from "/logo4.webp";
 
 export default function Counts() {
   const counts: counts_t[] = [

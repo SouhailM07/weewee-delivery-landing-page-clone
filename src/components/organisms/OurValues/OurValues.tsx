@@ -1,9 +1,9 @@
 import { cards_t } from "../../../types";
 import HeadTitle from "../../atoms/HeadTitle/HeadTitle";
 import ReactArr from "../../atoms/ReactArr/ReactArr";
-import value1 from "/value1.png";
-import value2 from "/value2.png";
-import value3 from "/value3.png";
+import value1 from "/value1.webp";
+import value2 from "/value2.webp";
+import value3 from "/value3.webp";
 
 export default function OurValues() {
   const cards: cards_t[] = [

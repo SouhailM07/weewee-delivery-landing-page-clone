@@ -55,8 +55,10 @@ export default function Navbar() {
           shrink ? "py-[0.7rem]" : "py-[1rem]"
         } fixed w-full  top-0 bg-white z-[100] shadow-md duration-300 transition-all px-[1rem]`}
       >
+        {/* #2956A8 */}
         <nav className="text-txtBlue max-w-[56rem] mx-auto flexBetween">
           <div className="flexCenter gap-x-2">
+            <img className="md:hidden" src={logo} alt="logo" />
             <img width={32} height={39} src={logo} alt="logo" />
             <span className="text-[1.5rem] font-bold">WeeWee</span>
           </div>

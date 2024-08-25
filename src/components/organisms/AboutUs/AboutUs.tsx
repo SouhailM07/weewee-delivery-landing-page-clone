@@ -1,4 +1,4 @@
-import aboutImg from "/about.png";
+import aboutImg from "/about.webp";
 import playStoreImg from "/google_play.png";
 import appStoreImg from "/appstore.png";
 import ReactArr from "../../atoms/ReactArr/ReactArr";

@@ -1,4 +1,3 @@
-import "./styles.css";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import HeadTitle from "../../atoms/HeadTitle/HeadTitle";
@@ -12,11 +11,11 @@ import {
   type CarouselApi,
 } from "../../ui/carousel";
 
-import img1 from "/testimonials-1.jpg";
-import img2 from "/testimonials-2.jpg";
-import img3 from "/testimonials-3.jpg";
-import img4 from "/testimonials-4.jpg";
-import img5 from "/testimonials-5.jpg";
+import img1 from "/testimonials-1.webp";
+import img2 from "/testimonials-2.webp";
+import img3 from "/testimonials-3.webp";
+import img4 from "/testimonials-4.webp";
+import img5 from "/testimonials-5.webp";
 import { useEffect, useState } from "react";
 
 export default function Testimonials() {

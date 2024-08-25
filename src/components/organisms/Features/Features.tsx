@@ -1,6 +1,6 @@
 import "./styles.css";
 import HeadTitle from "../../atoms/HeadTitle/HeadTitle";
-import featuresBg from "/features.png";
+import featuresBg from "/features.webp";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheck } from "@fortawesome/free-solid-svg-icons";
 import ReactArr from "../../atoms/ReactArr/ReactArr";

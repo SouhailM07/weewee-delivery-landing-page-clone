@@ -74,7 +74,7 @@ const MiddleFooter = () => {
   ];
 
   return (
-    <section className="py-[2rem] bg-contain bg-no-repeat bg-right bg-white bg-[url('/footer_bg.png')] min-h-[15rem]">
+    <section className="py-[2rem] bg-contain bg-no-repeat bg-right bg-white bg-[url('/footer_bg.webp')] min-h-[15rem]">
       <div className="cc max-lg:max-w-[35rem]  flex justify-between max-lg:flex-col gap-y-[2rem]">
         <article className="space-y-2">
           <div className="flex justify-start items-center gap-x-2">
