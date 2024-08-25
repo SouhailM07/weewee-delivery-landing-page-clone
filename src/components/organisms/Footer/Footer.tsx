@@ -20,7 +20,7 @@ interface footerLinks_t {
 export default function Footer() {
   // const footerLinks:footerLinks_t[]=[{icon:}]
   return (
-    <footer className="mt-[5rem] bg-[#f5f8ff]">
+    <footer className="mt-[5rem] bg-[#f5f8ff] max-lg:py-[1rem]">
       <NewsLetter />
       <MiddleFooter />
       <Copyright />
@@ -29,7 +29,7 @@ export default function Footer() {
 }
 
 const NewsLetter = () => (
-  <section className="min-h-[10rem] flexCenter text-center">
+  <section className="min-h-[10rem] flexCenter text-center max-sm:px-[1rem]">
     <article className="space-y-3 w-[30rem] ">
       <h1 className="text-txtBlue text-[1.2rem] font-bold">Notre Newsletter</h1>
       <p className="text-[0.8rem]">
@@ -74,8 +74,8 @@ const MiddleFooter = () => {
   ];
 
   return (
-    <section className="py-[2rem] bg-contain bg-no-repeat bg-right bg-white bg-[url('/footer_bg.png')] h-[15rem]">
-      <div className="cc flex justify-between ">
+    <section className="py-[2rem] bg-contain bg-no-repeat bg-right bg-white bg-[url('/footer_bg.png')] min-h-[15rem]">
+      <div className="cc max-lg:max-w-[35rem]  flex justify-between max-lg:flex-col gap-y-[2rem]">
         <article className="space-y-2">
           <div className="flex justify-start items-center gap-x-2">
             <img src={logo} alt="logo" />
@@ -99,15 +99,15 @@ const MiddleFooter = () => {
             />
           </ul>
         </article>
-        <section className="flex gap-x-[2rem] w-[33rem]">
+        <section className="flex gap-[2rem] max-md:w-full w-[33rem] max-lg:flex-col ">
           <article>
             <h1 className="text-[0.8rem] font-bold text-txtBlue mb-4">
               LIENS UTILES
             </h1>
-            <ul className="grid grid-cols-2 gap-x-1 gap-y-2">
+            <ul className="grid grid-cols-2 max-lg:gap-y-[1rem]  gap-x-1 gap-y-2">
               <ReactArr
                 arr={liensUtiles}
-                className="flex items-center text-[0.7rem] gap-x-2 "
+                className="flex items-center max-lg:w-[10rem] max-sm:w-full text-[0.7rem] gap-x-2 "
                 Component={(e) => (
                   <>
                     <FontAwesomeIcon icon={faChevronDown} />
@@ -122,12 +122,12 @@ const MiddleFooter = () => {
               />
             </ul>
           </article>
-          <article>
+          <article className="max-md:self-center max-md:text-center">
             <h1 className="text-[0.8rem] font-bold text-txtBlue mb-4">
               Contact Us
             </h1>
             <ul className="w-[14rem] text-[0.8rem] ">
-              <li className="my-4 pr-[2rem]">
+              <li className="my-4 md:pr-[2rem]">
                 Centre commercial - Mohamadia mall, Etage R-1, local n°861,
                 Alger
               </li>

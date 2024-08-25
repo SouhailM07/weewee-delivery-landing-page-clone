@@ -29,7 +29,7 @@ export default function MainTemplate() {
         <Blog />
         <Contact />
       </main>
-      {/* <Footer />  */}
+      <Footer />
     </>
   );
 }

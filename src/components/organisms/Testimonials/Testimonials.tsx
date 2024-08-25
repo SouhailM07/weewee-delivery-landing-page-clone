@@ -134,7 +134,7 @@ const RenderItem = ({
   index,
 }: testimonials_t & { current: number; index: number }) => (
   <div
-    className={`min-h-[27rem] mx-auto w1200:w-[17rem] text-center  flex flex-col shadow-xl items-center  px-[1rem] py-[2rem] 
+    className={`w1200:min-h-[27rem] min-h-[18rem] mx-auto w1200:w-[17rem] text-center  flex flex-col shadow-xl items-center  px-[1rem] py-[2rem] 
     ${current == index + 1 ? "opacity-100 " : "opacity-40"}`}
   >
     <RatingStars rating={rating} />
