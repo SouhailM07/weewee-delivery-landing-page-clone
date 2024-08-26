@@ -24,7 +24,7 @@ export default function OurValues() {
     },
   ];
   return (
-    <section className="space-y-[3rem] ">
+    <section className="space-y-[3rem]">
       <HeadTitle
         title="our values"
         subTitle="Processus de livraison plus efficace !"

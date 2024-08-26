@@ -36,7 +36,10 @@ export default function Contact() {
     },
   ];
   return (
-    <section className="cc space-y-[2rem] max-lg:max-w-[40rem] max-md:max-w-[30rem]">
+    <section
+      id="contact"
+      className="cc space-y-[2rem] max-lg:max-w-[40rem] max-md:max-w-[30rem]"
+    >
       <HeadTitle title="Nous sommes là pour vous aider" subTitle="Contact" />
       <div className="grid grid-cols-2 max-lg:grid-cols-1 gap-x-[2rem]">
         <article className="pb-[2rem] ">

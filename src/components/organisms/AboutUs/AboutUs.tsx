@@ -18,7 +18,10 @@ export default function AboutUs() {
     },
   ];
   return (
-    <section className="max-w-[56rem] mx-auto max-sm:m-3 bg-secondaryBg sm:px-8 py-6  rounded-sm grid grid-cols-2 gap-x-[2rem] max-lg:grid-cols-1 max-lg:max-w-[35rem] max-md:max-w-[25rem]">
+    <section
+      id="about"
+      className="cc max-sm:m-3 bg-secondaryBg sm:px-8 py-6  rounded-sm grid grid-cols-2 gap-x-[2rem] max-lg:grid-cols-1 max-lg:max-w-[35rem] max-md:max-w-[25rem]"
+    >
       <article className="max-sm:px-8">
         <h1 className="text-mainBlue text-[0.8rem] font-bold">
           Qui Sommes nous ?

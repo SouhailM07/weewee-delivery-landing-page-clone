@@ -11,18 +11,7 @@ interface ServiceCardT {
   parentStyles: string;
   spanStyles: string;
 }
-/*
- * text color/ span bg / card bg
-  1- 2DB6FA
-  2- F68C09
-  3- 08DA4E
-  4- B50EDF
-  ---
-  #DBF3FE
-  #FDE3C4
-  #CFFDDF
-  #F8E4FD
- */
+
 export default function Services() {
   const servicesCards: ServiceCardT[] = [
     {
@@ -55,7 +44,7 @@ export default function Services() {
     },
   ];
   return (
-    <section className="cc">
+    <section id="services" className="cc">
       <HeadTitle
         title="Notre service client est disponible 24h/24 et 7j/7 !"
         subTitle="Services"

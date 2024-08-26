@@ -7,7 +7,16 @@
 }
 
 .cc {
-  @apply max-w-[58rem] mx-auto px-[1rem];
+  @apply max-w-[58rem] mx-auto px-[1rem] w1400:max-w-[64rem];
+}
+
+#liPanel ul {
+  @apply block z-[99] opacity-0 shadow-lg duration-300 transition-all;
+  visibility: hidden;
+}
+#liPanel:hover ul {
+  @apply opacity-100;
+  visibility: visible;
 }
 
 html {

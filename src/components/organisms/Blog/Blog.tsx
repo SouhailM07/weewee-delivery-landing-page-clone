@@ -36,7 +36,10 @@ export default function Blog() {
   ];
 
   return (
-    <section className="cc space-y-[2rem] max-lg:max-w-[35rem] max-sm:w-full max-md:max-w-[25rem]">
+    <section
+      id="blogs"
+      className="cc space-y-[2rem] max-lg:max-w-[35rem] max-sm:w-full max-md:max-w-[25rem]"
+    >
       <HeadTitle title="Articles récents de notre Blog" subTitle="Blog" />
       <ul className="flex justify-center gap-y-[1rem] gap-x-[1.5rem] flex-wrap">
         <ReactArr arr={blogs} Component={RenderItem} />

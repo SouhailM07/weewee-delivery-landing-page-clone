@@ -19,11 +19,11 @@ import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 
 const links: navLinks[] = [
-  { label: "Accueil", link: "" },
-  { label: "À propos", link: "" },
-  { label: "Nos services", link: "" },
-  { label: "Blog", link: "" },
-  { label: "Contact", link: "" },
+  { label: "Accueil", link: "hero" },
+  { label: "À propos", link: "about" },
+  { label: "Nos services", link: "services" },
+  { label: "Blog", link: "blogs" },
+  { label: "Contact", link: "contact" },
 ];
 
 let miniLinks: navLinks[] = [
@@ -43,7 +43,7 @@ export default function Navbar() {
       setShrink(false);
     }
   };
-
+  const handleToggleTrue = () => setToggleBar(true);
   useEffect(() => {
     window.addEventListener("scroll", toggleVisibility);
     return () => window.removeEventListener("scroll", toggleVisibility);
@@ -55,15 +55,14 @@ export default function Navbar() {
           shrink ? "py-[0.7rem]" : "py-[1rem]"
         } fixed w-full  top-0 bg-white z-[100] shadow-md duration-300 transition-all px-[1rem]`}
       >
-        {/* #2956A8 */}
-        <nav className="text-txtBlue max-w-[56rem] mx-auto flexBetween">
+        <nav className="text-txtBlue cc flexBetween">
           <div className="flexCenter gap-x-2">
             <img src={logo} alt="logo" />
             <span className="text-[1.5rem] font-bold">WeeWee</span>
           </div>
           <button
             className="w1200:hidden flexCenter hover:text-mainBlue"
-            onClick={() => setToggleBar(true)}
+            onClick={handleToggleTrue}
             aria-label="toggle menubar btn"
           >
             <FontAwesomeIcon
@@ -83,7 +82,8 @@ export default function Navbar() {
               />
               <li
                 role="listitem"
-                className="flexCenter gap-x-2 group cursor-pointer"
+                id="liPanel"
+                className=" flexCenter gap-x-2 cursor-pointer"
               >
                 <span className="hover:text-mainBlue">Creer un compte</span>
                 <FontAwesomeIcon
@@ -92,7 +92,7 @@ export default function Navbar() {
                 />
                 <ul
                   role="list"
-                  className="absolute translate-y-[6.5rem] hidden  group-hover:block rounded-md border bg-white text-txtBlue px-3 py-4  space-y-[0.7rem] w-[9rem]"
+                  className=" absolute translate-y-[6.5rem] rounded-md border bg-white text-txtBlue px-3 py-4  space-y-[0.7rem] w-[9rem]"
                 >
                   <ReactArr
                     arr={miniLinks}
@@ -118,35 +118,40 @@ export default function Navbar() {
   );
 }
 
-const MobileNavbar = ({ setToggleBar }) => (
-  <motion.section
-    initial={{ opacity: 0 }}
-    animate={{ opacity: 1 }}
-    exit={{ opacity: 0 }}
-    className="flex flex-col gap-y-[1rem] fixed top-0 w-full bg-[#01163DE6] z-[101] h-screen p-[1rem]"
-  >
-    <button
-      className="flexCenter self-end text-white"
-      onClick={() => setToggleBar(false)}
+const MobileNavbar = ({ setToggleBar }) => {
+  let handleToggleFalse = () => setToggleBar(false);
+  return (
+    <motion.section
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      className="flex flex-col gap-y-[1rem] fixed top-0 w-full bg-[#01163DE6] z-[101] h-screen p-[1rem]"
     >
-      <FontAwesomeIcon className="h-[1.2rem] aspect-square" icon={faClose} />
-    </button>
-    <ul
-      role="list"
-      className="bg-white rounded-md h-full p-[1rem] font-bold text-[0.8rem] text-txtBlue space-y-[0.9rem]"
-    >
-      <ReactArr
-        arr={links}
-        className="hover:text-mainBlue "
-        Component={(e: navLinks) => <a href={e.link}>{e.label}</a>}
-      />
-      <Accordion role="listitem" type="single" collapsible className="!my-2 ">
-        <AccordionItem value="item-1" className="!border-none">
-          <AccordionTrigger className=" font-bold h-[2rem]">
-            Creer un compte
-          </AccordionTrigger>
-          <AccordionContent>
-            <ul
+      <button
+        className="flexCenter self-end text-white"
+        onClick={handleToggleFalse}
+      >
+        <FontAwesomeIcon className="h-[1.2rem] aspect-square" icon={faClose} />
+      </button>
+      <ul
+        role="list"
+        className="bg-white rounded-md h-full p-[1rem] font-bold text-[0.8rem] text-txtBlue space-y-[0.9rem]"
+      >
+        <ReactArr
+          arr={links}
+          className="hover:text-mainBlue "
+          Component={(e: navLinks) => (
+            <a onClick={handleToggleFalse} href={`#${e.link}`}>
+              {e.label}
+            </a>
+          )}
+        />
+        <Accordion role="listitem" type="single" collapsible className="!my-2 ">
+          <AccordionItem value="item-1" className="!border-none">
+            <AccordionTrigger className=" font-bold h-[2rem]">
+              Creer un compte
+            </AccordionTrigger>
+            <AccordionContent
               role="list"
               className="rounded-md border bg-white text-txtBlue px-3 py-4  space-y-[0.7rem] w-full shadow-lg"
             >
@@ -158,15 +163,15 @@ const MobileNavbar = ({ setToggleBar }) => (
                   </a>
                 )}
               />
-            </ul>
-          </AccordionContent>
-        </AccordionItem>
-      </Accordion>
-      <li role="listitem">
-        <MyButton hoverEffect className="py-[0.4rem] px-4 w-full text-start">
-          Espace Membre
-        </MyButton>
-      </li>
-    </ul>
-  </motion.section>
-);
+            </AccordionContent>
+          </AccordionItem>
+        </Accordion>
+        <li role="listitem">
+          <MyButton hoverEffect className="py-[0.4rem] px-4 w-full text-start">
+            Espace Membre
+          </MyButton>
+        </li>
+      </ul>
+    </motion.section>
+  );
+};
