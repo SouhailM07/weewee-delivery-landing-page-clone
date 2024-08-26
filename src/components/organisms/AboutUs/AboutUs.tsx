@@ -1,6 +1,6 @@
 import aboutImg from "/about.webp";
-import playStoreImg from "/google_play.png";
-import appStoreImg from "/appstore.png";
+import playStoreImg from "/google_play.webp";
+import appStoreImg from "/appstore.webp";
 import ReactArr from "../../atoms/ReactArr/ReactArr";
 import { storeLinks_t } from "../../../types";
 

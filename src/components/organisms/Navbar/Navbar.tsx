@@ -58,14 +58,7 @@ export default function Navbar() {
         {/* #2956A8 */}
         <nav className="text-txtBlue max-w-[56rem] mx-auto flexBetween">
           <div className="flexCenter gap-x-2">
-            <img className="max-md:hidden" src={logo} alt="logo" />
-            <img
-              className="md:hidden"
-              width={48}
-              height={60}
-              src={logo}
-              alt="logo"
-            />
+            <img src={logo} alt="logo" />
             <span className="text-[1.5rem] font-bold">WeeWee</span>
           </div>
           <button
